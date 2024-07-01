@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto_Slab } from "next/font/google";
+import {  Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
-const inter = Roboto_Slab({ subsets: ["latin"] });
+const inter = Roboto_Slab({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Pearl Latteier",
