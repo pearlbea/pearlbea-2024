@@ -1,34 +1,83 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <main className={styles.main}>
-   
-          <Image 
-            src='/full-pb-photo.jpg' 
-            alt='Photo of Pearl'
-            width='600'
-            height='316'
-            />
-      
-            <Image
-              src="/icon.png"
-              alt="PB icon"
-              className={styles.pbIcon}
-              width='100'
-              height='100'
-              priority
-            />
-   
-  
-      <h1 className={styles.headline}>Pearl Latteier</h1>
-
-
-      <div className={styles.grid}>
-
-
+      <div className={styles.imgWrapper}>
+        <Image
+          src="/full-pb-photo-blur.jpg"
+          alt="Photo of Pearl"
+          width={600}
+          height={316}
+          priority
+        />
       </div>
+      <Image
+        src="/icon.png"
+        alt="PB icon"
+        className={styles.pbIcon}
+        width={60}
+        height={60}
+        priority
+      />
+
+      <h1 className={styles.headline}>Pearl Latteier</h1>
+      <p className={styles.description}>
+        Thanks for visiting! You can also find me on{" "}
+        <Link
+          className={styles.inlineLink}
+          href="https://github.com/pearlbea"
+          rel="noopener nofollower"
+          target="_blank"
+        >
+          GitHub
+        </Link>
+        ,{" "}
+        <Link
+          className={styles.inlineLink}
+          href="https://www.linkedin.com/in/pearllatteier/"
+          rel="noopener nofollower"
+          target="_blank"
+        >
+          LinkedIn
+        </Link>
+        , and{" "}
+        <Link
+          className={styles.inlineLink}
+          href="https://twitter.com/pblatteier"
+          rel="noopener nofollower"
+          target="_blank"
+        >
+          Twitter
+        </Link>
+        .
+      </p>
+
+      <nav>
+        <ul className={styles.buttonLinks}>
+          <li>
+            <Link className={styles.buttonLink} href="/writing">
+              Writing
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.buttonLink} href="/speaking">
+              Speaking
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.buttonLink} href="/coding">
+              Coding
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.buttonLink} href="/working">
+              Working
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </main>
   );
 }
