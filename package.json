@@ -10,6 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.4",
+    "@types/mdx": "^2.0.13",
+    "clsx": "^2.1.1",
     "jest-environment-jsdom": "^29.7.0",
     "next": "^14.2.4",
     "react": "^18.3.1",

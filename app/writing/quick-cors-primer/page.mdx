@@ -1,0 +1,73 @@
+import Image from "next/image";
+
+<Image
+  src="/quick-cors-primer.jpeg"
+  alt="A skull and crossbones flag on a computer screen"
+  width={880}
+  height={607}
+  priority
+/>
+
+Photo by [Michael Geiger on Unsplash](https://unsplash.com/@jackson_893)
+
+# A Quick CORS Primer for Frontend Folks
+
+You've made some requests on [Postman](https://www.postman.com/). You understand which endpoints will deliver what payloads. Contented, you start developing on localhost. Enter the villain — CORS Error!
+
+## What is CORS?
+
+Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) is a [web standard](https://www.w3.org/wiki/CORS) designed to let servers on different domains share resources (HTML or JSON documents, images, fonts, etc.) in a safe way.
+
+CORS comes into play when a web application on one origin (https://some-domain.com) requests a resource from another origin (https://some-other-domain.com). To protect both the server receiving and the browser sending the request, CORS manages these cross-origin interactions.
+
+## How does CORS work?
+
+The CORS standard manages cross-origin interactions via HTTP headers. The server hosting the desired resource can use `Access-Control-Allow-Origin` and [other headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) to specify how it will respond to cross-origin requests.
+
+**Simple requests**
+
+For example, when I send a GET request to [Dog.ceo](http://dog.ceo) for a [random dog pic](https://dog.ceo/api/breeds/image/random), the response includes this header: `Access-Control-Allow-Origin: *` The `*` means that the sever will deliver the the resource in response to any request, whatever domain it comes from.
+
+If, for some reason, [Dog.ceo](http://dog.ceo) decided to make its resources available only to requests from https://example.com, it could change the header to `Access-Control-Allow-Origin: https://example.com`.
+
+Or [Dog.ceo](http://dog.ceo) might want to limit its resources to a handful of origins. In that case, it could set the allow-origin header to whatever the request origin is, but then inspect the request to make sure it's on the list of allowed origins before responding.
+
+If the allow-origin header is anything more specific than `*` , the server should also send a [`Vary: Origin` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary), telling caches that the content of the response will vary depending where the request is coming from.
+
+**Preflight requests**
+
+My GET request to [Dog.ceo](http://dog.ceo) is very simple. Many requests are more complicated, and the CORS standard requires additional work from browsers whenever a request isn't a GET, HEAD, or POST, when it's content type isn't a form or plain text, or when it meets several other conditions.
+
+In these cases, before it sends the cross-origin request, the browser sends a "preflight request" using the OPTIONS method. The purpose of the pre-flight request is to figure out if the real request is actually allowed by the responding domain. The response from the server to the OPTIONS request will indicate which origins are allowed, which request methods are allowed, if cookies Authorization headers are allowed, or required, or forbidden, and other things along those lines.
+
+(Note: the reason your cross-origin Postman request worked fine is because Postman is not a browser. It does not send a preflight request.)
+
+If you're not sure if your request is simple enough to avoid preflight, a nice tool called [Will it CORS?](https://httptoolkit.tech/will-it-cors/) can help you figure it out.
+
+Once the browser had received the response to the preflight request and determined that your request is OK, it will send the request. If your request is not OK, you'll get the infuriating CORS error.
+
+## Troubleshooting CORS errors
+
+What about that error? When you run into a CORS error, what can you do?
+
+<Image src="/firefox.webp" alt="" width={1000} height={581} />
+
+If you're a frontend person, you can start by inspecting your request. Are you using the right method, sending the right credentials (or not sending credentials if they are not accepted by the responding domain), and sending the appropriate content type? The [MDN article](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) about what triggers a preflight request could be helpful here, along with the [Will it CORS?](https://httptoolkit.tech/will-it-cors/) tool.
+
+If you have access to the responding server, you're in luck. You can examine the server's CORS configuration and make sure that it is correct. MDN has an [article](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) about specifically for server developers that may assist you in this. Alternatively, if you have access to a person who has access to the server, supplicate yourself and humbly, kindly, gratefully ask for help.
+
+Whatever the case, I hope this quick primer helps keep you brave in the face of your next CORS error.
+
+---
+
+_Originally published in the [Propeller Health Tech Blog](https://medium.com/propeller-health-tech-blog/a-quick-cors-primer-for-frontend-folks-83c53b9cb28f)._
+
+References
+
+[https://httptoolkit.tech/will-it-cors/](https://httptoolkit.tech/will-it-cors/)
+
+[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+[https://fetch.spec.whatwg.org/#cors-protocol](https://fetch.spec.whatwg.org/#cors-protocol)
+
+[https://www.w3.org/wiki/CORS](https://www.w3.org/wiki/CORS)

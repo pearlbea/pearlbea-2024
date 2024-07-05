@@ -1,0 +1,47 @@
+.article {
+  font-size: 1.58rem;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 1200px;
+}
+.articleTitle {
+  margin-bottom: 3rem;
+}
+.code {
+  background: #073642;
+  
+  color: #657b83;
+  padding: 0.1em;
+  border-radius: 0.3em;
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+}
+.subTitle,
+.line {
+  margin-bottom: 1.58rem;
+}
+.hero {
+  text-align: center;
+}
+.caption {
+  font-size: 0.8rem;
+}
+.link {
+  color: #950451;
+  text-decoration: underline;
+  
+}
+.paragraph {
+  margin-bottom: 1.58rem;
+  color: hsla(0, 0%, 0%, 0.73);
+  line-height: 2.2rem;
+}
+
+.card {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  padding: 2rem 1.2rem;
+}
+.cardTitle {
+  font-size: 2.2rem;
+}
