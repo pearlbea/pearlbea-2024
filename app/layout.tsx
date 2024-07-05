@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import {  Roboto_Slab } from "next/font/google";
+import { roboto } from "./fonts";
 import "./globals.css";
-
-const inter = Roboto_Slab({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Pearl Latteier",
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

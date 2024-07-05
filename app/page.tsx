@@ -1,6 +1,10 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import Link from "next/link";
+import { clsx } from "clsx";
+import styles from "./page.module.css";
+
+import { roboto_slab } from "./fonts";
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -22,7 +26,9 @@ export default function Home() {
         priority
       />
 
-      <h1 className={styles.headline}>Pearl Latteier</h1>
+      <h1 className={clsx(styles.headline, roboto_slab.className)}>
+        Pearl Latteier
+      </h1>
       <p className={styles.description}>
         Thanks for visiting! You can also find me on{" "}
         <Link
