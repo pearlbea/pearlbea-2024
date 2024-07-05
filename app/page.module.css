@@ -18,18 +18,21 @@
 }
 .description {
   font-size: 1.25rem;
-  max-width: 520px;
+  max-width: 500px;
   text-align: left;
   margin: 1rem;
   line-height: 1.8rem;
 }
 .inlineLink {
   color: #950451;
+  text-decoration: underline;
 }
 .inlineLink:active,
 .inlineLink:hover,
 .inlineLink:focus {
   text-decoration: underline;
+  background-color: #fdf6e3;
+  transition: background-color 0.25s;
 }
 .buttonLinks {
   display: grid;
@@ -65,5 +68,3 @@
     padding: 4rem;
   }
 }
-
-
