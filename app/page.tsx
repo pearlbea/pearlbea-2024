@@ -13,7 +13,7 @@ export default function Home() {
           src="/full-pb-photo-blur.jpg"
           alt="Photo of Pearl"
           width={600}
-          height={316}
+          height={317}
           priority
         />
       </div>
@@ -77,11 +77,11 @@ export default function Home() {
               Coding
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className={styles.buttonLink} href="/working">
               Working
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </main>

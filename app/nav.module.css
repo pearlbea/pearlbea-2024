@@ -28,3 +28,16 @@
 .active {
   text-decoration: underline;
 }
+
+@media screen and (width < 700px) {
+  .link,
+  .link:hover,
+  .link:focus,
+  .link:active {
+    padding: 0.8rem 0.4rem;
+    font-size: 1.25rem;
+  }
+  .links {
+    padding-left: 0.4rem;
+  }
+}

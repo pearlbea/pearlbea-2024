@@ -1,10 +1,12 @@
 import Image from "next/image";
+import styles from "../writing.module.css";
 
 <Image
   src="/quick-cors-primer.jpeg"
   alt="A skull and crossbones flag on a computer screen"
   width={880}
   height={607}
+  className={styles.heroImage}
   priority
 />
 
@@ -50,7 +52,13 @@ Once the browser had received the response to the preflight request and determin
 
 What about that error? When you run into a CORS error, what can you do?
 
-<Image src="/firefox.webp" alt="" width={1000} height={581} />
+<Image
+  src="/firefox.jpg"
+  alt=""
+  width={1000}
+  height={581}
+  className={styles.heroImage}
+/>
 
 If you're a frontend person, you can start by inspecting your request. Are you using the right method, sending the right credentials (or not sending credentials if they are not accepted by the responding domain), and sending the appropriate content type? The [MDN article](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) about what triggers a preflight request could be helpful here, along with the [Will it CORS?](https://httptoolkit.tech/will-it-cors/) tool.
 
