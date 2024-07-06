@@ -3,16 +3,17 @@
   padding: 2rem;
   margin: 0 auto;
   margin-top: 4rem;
+  width: 100%;
   max-width: 1200px;
+}
+
+@media screen {
+  
 }
 .articleTitle {
   margin-bottom: 3rem;
 }
 .code {
-  background: #073642;
-  
-  color: #657b83;
-  padding: 0.1em;
   border-radius: 0.3em;
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 }
@@ -20,8 +21,11 @@
 .line {
   margin-bottom: 1.58rem;
 }
-.hero {
+.heroImage {
   text-align: center;
+  width: 100%;
+  max-width: 880px;
+  height: auto;
 }
 .caption {
   font-size: 0.8rem;
@@ -29,10 +33,9 @@
 .link {
   color: #950451;
   text-decoration: underline;
-  
 }
 .paragraph {
-  margin-bottom: 1.58rem;
+  margin: 0 auto 1.58rem auto;
   color: hsla(0, 0%, 0%, 0.73);
   line-height: 2.2rem;
 }
