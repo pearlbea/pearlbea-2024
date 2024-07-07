@@ -26,7 +26,7 @@ CORS comes into play when a web application on one origin (https://some-domain.c
 
 The CORS standard manages cross-origin interactions via HTTP headers. The server hosting the desired resource can use `Access-Control-Allow-Origin` and [other headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) to specify how it will respond to cross-origin requests.
 
-**Simple requests**
+### Simple requests
 
 For example, when I send a GET request to [Dog.ceo](http://dog.ceo) for a [random dog pic](https://dog.ceo/api/breeds/image/random), the response includes this header: `Access-Control-Allow-Origin: *` The `*` means that the sever will deliver the the resource in response to any request, whatever domain it comes from.
 
@@ -36,7 +36,7 @@ Or [Dog.ceo](http://dog.ceo) might want to limit its resources to a handful of o
 
 If the allow-origin header is anything more specific than `*` , the server should also send a [`Vary: Origin` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary), telling caches that the content of the response will vary depending where the request is coming from.
 
-**Preflight requests**
+### Preflight requests
 
 My GET request to [Dog.ceo](http://dog.ceo) is very simple. Many requests are more complicated, and the CORS standard requires additional work from browsers whenever a request isn't a GET, HEAD, or POST, when it's content type isn't a form or plain text, or when it meets several other conditions.
 
@@ -66,11 +66,9 @@ If you have access to the responding server, you're in luck. You can examine the
 
 Whatever the case, I hope this quick primer helps keep you brave in the face of your next CORS error.
 
----
-
 _Originally published in the [Propeller Health Tech Blog](https://medium.com/propeller-health-tech-blog/a-quick-cors-primer-for-frontend-folks-83c53b9cb28f)._
 
-References
+## References
 
 [https://httptoolkit.tech/will-it-cors/](https://httptoolkit.tech/will-it-cors/)
 
@@ -79,3 +77,5 @@ References
 [https://fetch.spec.whatwg.org/#cors-protocol](https://fetch.spec.whatwg.org/#cors-protocol)
 
 [https://www.w3.org/wiki/CORS](https://www.w3.org/wiki/CORS)
+
+_Originally published in the [Propeller Health Tech Blog](https://medium.com/propeller-health-tech-blog/a-quick-cors-primer-for-frontend-folks-83c53b9cb28f)._
