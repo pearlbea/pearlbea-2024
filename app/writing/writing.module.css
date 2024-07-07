@@ -6,10 +6,14 @@
   width: 100%;
   max-width: 900px;
 }
-
 .articleTitle {
   margin-bottom: 3rem;
   line-height: 1.1;
+  font-size: 2.8rem;
+}
+
+.subTitle {
+  font-size: 1.58rem;
 }
 .code {
   border-radius: 0.3em;
@@ -17,7 +21,7 @@
 }
 .subTitle,
 .line {
-  margin-bottom: 1.58rem;
+  margin-bottom: 1.5rem;
 }
 .heroImage {
   text-align: center;
@@ -35,14 +39,6 @@
 .paragraph {
   margin: 0 auto 1.58rem auto;
   color: hsla(0, 0%, 0%, 0.73);
-  line-height: 2.2rem;
-}
-
-.card {
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-  padding: 2rem 1.2rem;
-}
-.cardTitle {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }

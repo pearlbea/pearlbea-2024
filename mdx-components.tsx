@@ -9,13 +9,20 @@ export function useMDXComponents(): MDXComponents {
       <a
         href={href}
         rel="noopener noreferrer"
-        className={styles.link}
+        className="text-pink-800 underline underline-offset-4"
         target="_blank"
       >
         {children}
       </a>
     ),
-    code: ({ children }) => <code className={styles.code}>{children}</code>,
+    blockquote: ({ children }) => (
+      <blockquote className="border-l-4 border-pink-800 px-4 italic leading-none">
+        {children}
+      </blockquote>
+    ),
+    code: ({ children }) => (
+      <code className="font-mono text-base">{children}</code>
+    ),
     h1: ({ children }) => (
       <h1 className={clsx(roboto_slab.className, styles.articleTitle)}>
         {children}
