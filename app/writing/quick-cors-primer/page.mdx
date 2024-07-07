@@ -21,7 +21,7 @@ Cross-Origin Resource Sharing ([CORS](https://developer.mozilla.org/en-US/docs/W
 
 CORS comes into play when a web application on one origin (https://some-domain.com) requests a resource from another origin (https://some-other-domain.com). To protect both the server receiving and the browser sending the request, CORS manages these cross-origin interactions.
 
-## How does CORS work?
+## How Does CORS Work?
 
 The CORS standard manages cross-origin interactions via HTTP headers. The server hosting the desired resource can use `Access-Control-Allow-Origin` and [other headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) to specify how it will respond to cross-origin requests.
 
@@ -47,7 +47,7 @@ If you're not sure if your request is simple enough to avoid preflight, a nice t
 
 Once the browser had received the response to the preflight request and determined that your request is OK, it will send the request. If your request is not OK, you'll get the infuriating CORS error.
 
-## Troubleshooting CORS errors
+## Troubleshooting CORS Errors
 
 What about that error? When you run into a CORS error, what can you do?
 
