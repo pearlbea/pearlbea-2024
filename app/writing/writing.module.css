@@ -1,24 +1,7 @@
-.article {
-  font-size: 1.58rem;
-  padding: 2rem;
-  margin: 0 auto;
-  margin-top: 4rem;
-  width: 100%;
-  max-width: 900px;
-}
-.articleTitle {
-  margin-bottom: 3rem;
-  line-height: 1.1;
-  font-size: 2.8rem;
-}
-
 .subTitle {
   font-size: 1.58rem;
 }
-.code {
-  border-radius: 0.3em;
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-}
+
 .subTitle,
 .line {
   margin-bottom: 1.5rem;
@@ -31,14 +14,4 @@
 }
 .caption {
   font-size: 0.8rem;
-}
-.link {
-  color: #950451;
-  text-decoration: underline;
-}
-.paragraph {
-  margin: 0 auto 1.58rem auto;
-  color: hsla(0, 0%, 0%, 0.73);
-  font-size: 1.2rem;
-  line-height: 1.6rem;
 }

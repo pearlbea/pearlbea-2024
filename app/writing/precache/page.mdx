@@ -1,4 +1,14 @@
-Photo by Matthew Brodeur on Unsplash
+import Image from "next/image";
+
+<Image
+  src="/precache-for-performance.jpg"
+  alt=""
+  width={768}
+  height={513}
+  priority
+/>
+
+Photo by [Matthew Brodeur on Unsplash](https://unsplash.com/@mrbrodeur)
 
 # Pre-cache for Performance
 
@@ -20,7 +30,7 @@ Both types of caching improve your site's load time by reducing the number of ne
 
 Two pre-caching patterns are commonly used to improve loading speed:
 
-### 1. Pre-cache Critical UI Resources
+### 1. Pre-cache critical UI resources
 
 First, by pre-caching your site's critical static assets (or [app shell](https://web.dev/learn/pwa/architecture/), if your site is a single page application), you can give your users the experience of an almost instant page load on subsequent visits to your site. As a bonus, this also makes your UI available offline, perhaps displaying a lovely, brand-consistent "You're Offline" message.
 
@@ -45,7 +55,7 @@ The `event.waitUntil` method waits for the call to `cache.addAll` to resolve. Th
 
 The [Workbox](https://developer.chrome.com/docs/workbox/) library makes pre-caching even easier. You can use the Workbox CLI to generate a service worker and determine which files to pre-cache. There is also Workbox webpack plugin that will generate a service worker and automatically pre-cache the assets it finds in your webpack compilation.
 
-## 2. Precache Other Routes
+### 2. Precache other routes
 
 You can also use the service-worker install event to cache less-critical but still important resources, such as assets for the routes your user is most likely to go to or below-the-fold content. If the install succeeds, these secondary resources will be available the instant they are needed.
 
@@ -73,7 +83,7 @@ self.addEventListener('activate', event => {
 
 With the fairly small effort of pre-caching resources (especially small if you use Workbox), you banish the downasaur and get instant loading for your users whenever they return to your site. Pre-caching is just one of many steps you can take to improve your site's performance. Watch this space for more!
 
-### Resources
+## Resources
 
 [Caching Best Practices and Max-Age Gotchas](https://jakearchibald.com/2016/caching-best-practices/), Jake Archibald
 

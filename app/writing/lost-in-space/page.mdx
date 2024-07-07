@@ -1,14 +1,7 @@
 import Image from "next/image";
 import styles from "../writing.module.css";
 
-<Image
-  src="/lost-in-space.jpg"
-  alt=""
-  width={880}
-  height={528}
-  className={styles.heroImage}
-  priority
-/>
+<Image src="/lost-in-space.jpg" alt="" width={768} height={528} priority />
 
 # Lost in SPA(ce): Helping screen readers navigate React applications
 
@@ -37,9 +30,9 @@ In HTML, it would look something like this:
 <Image
   src="/code-sample1.png"
   alt="Html code depicting a skip link anchor tag"
-  width={880}
-  height={640}
-  className={styles.heroImage}
+  width={768}
+  height={559}
+  className="mb-4"
 />
 
 We repurposed the skip-link pattern as a way to let users know when the content of our single page application had changed. It’s implemented as a lightweight component that wraps each of our page-level components. The component moves the focus to the top of the page and prompts the screen reader to say the page title, imitating what would happen when the browser refreshes. Here’s more or less the whole thing:
@@ -47,9 +40,9 @@ We repurposed the skip-link pattern as a way to let users know when the content 
 <Image
   src="/code-sample2.png"
   alt="Code snippet of a React component"
-  width={880}
-  height={699}
-  className={styles.heroImage}
+  width={768}
+  height={461}
+  className="mb-4"
 />
 
 We create a ref to the skip link and move focus to the link as soon as the component has loaded. The screen reader reads the link, which includes the title of the page and a message about skipping to the main content. This way, the user knows what page they are on and what to do to move forward. There are likely better implementations out there (share yours in the comments!). We hoped that by following the skip-link pattern ours would at least be familiar and easy to understand.

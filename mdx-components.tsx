@@ -20,23 +20,23 @@ export function useMDXComponents(): MDXComponents {
         {children}
       </blockquote>
     ),
-    code: ({ children }) => (
-      <code className="font-mono text-base">{children}</code>
-    ),
     h1: ({ children }) => (
-      <h1 className={clsx(roboto_slab.className, styles.articleTitle)}>
+      <h1 className={clsx(roboto_slab.className, "font-bold text-4xl py-4")}>
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className={clsx(roboto_slab.className, styles.subTitle)}>
+      <h2 className={clsx(roboto_slab.className, "font-bold text-2xl py-2")}>
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h2 className={clsx(roboto_slab.className)}>{children}</h2>
+      <h2 className={clsx(roboto_slab.className, "font-medium text-xl pb-2")}>
+        {children}
+      </h2>
     ),
     hr: () => <hr className={styles.line} />,
-    p: ({ children }) => <p className={styles.paragraph}>{children}</p>,
+    p: ({ children }) => <p className="text-lg mb-4">{children}</p>,
+    pre: ({ children }) => <pre className="text-lg px-8">{children}</pre>,
   };
 }
