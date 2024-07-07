@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { clsx } from "clsx";
 import { roboto_slab } from "../fonts";
-import styles from "../writing/writing.module.css";
 
 export default function ArticleCard({
   title,
@@ -13,14 +12,19 @@ export default function ArticleCard({
   link: string;
 }) {
   return (
-    <div className={styles.card}>
+    <div className="flex flex-col column justify-between shadow-md pt-16 pb-8 px-8 rounded">
+      <div>
+        <Link className={clsx(roboto_slab.className, "text-3xl")} href={link}>
+          {title}
+        </Link>
+        <p className="text-lg pt-8">{summary}</p>
+      </div>
       <Link
-        className={clsx(roboto_slab.className, styles.cardTitle)}
         href={link}
+        className="underline text-base text-right text-pink-800"
       >
-        {title}
+        Read more
       </Link>
-      <p className={styles.preview}>{summary}</p>
     </div>
   );
 }
