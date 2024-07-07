@@ -12,12 +12,15 @@ export default function ArticleCard({
   link: string;
 }) {
   return (
-    <div className="flex flex-col column justify-between shadow-md pt-16 pb-8 px-8 rounded">
+    <div className="flex flex-col column justify-between shadow-md pt-16 pb-4 px-4 rounded">
       <div>
-        <Link className={clsx(roboto_slab.className, "text-3xl")} href={link}>
+        <Link
+          className={clsx(roboto_slab.className, "text-3xl font-bold")}
+          href={link}
+        >
           {title}
         </Link>
-        <p className="text-lg pt-8">{summary}</p>
+        <p className="text-lg py-4">{summary}</p>
       </div>
       <Link
         href={link}

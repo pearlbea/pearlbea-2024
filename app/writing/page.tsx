@@ -25,6 +25,11 @@ export default function Writing() {
           summary="Improve your page load time by pre-caching resources during service worker installation."
           link="./writing/precache"
         />
+        <Card
+          title="A Tale of Four Components"
+          summary="An exploration of web component libraries that compares vanilla JavaScript, Nutmeg, Polymer, and Stencil versions of the same component."
+          link="./writing/tale-of-four-components"
+        />
       </div>
     </>
   );
