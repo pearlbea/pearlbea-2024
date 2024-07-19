@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clsx } from "clsx";
 import { roboto } from "./fonts";
 import "./globals.css";
 
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={clsx(roboto.className, "bg-slate-50")}>
+        <main className="container mx-auto max-w-6xl">{children}</main>
+      </body>
     </html>
   );
 }
