@@ -10,7 +10,7 @@ export default function ArticleLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className={clsx(roboto.className)}>
+    <main className={clsx(roboto.className, "p-8")}>
       <NavMenu />
       {children}
     </main>
