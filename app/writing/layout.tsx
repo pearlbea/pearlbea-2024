@@ -1,5 +1,3 @@
-"use client";
-
 import { clsx } from "clsx";
 import { roboto } from "../fonts";
 import NavMenu from "../nav";
@@ -10,9 +8,9 @@ export default function ArticleLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className={clsx(roboto.className)}>
-      <NavMenu />
+    <div className={clsx(roboto.className, "flex p-8")}>
+      <NavMenu page="writing" />
       {children}
-    </main>
+    </div>
   );
 }

@@ -2,7 +2,7 @@ import Card from "../writing/card";
 
 export default function Writing() {
   return (
-    <div>
+    <section>
       <Card
         title=" A Quick Cors Primer for Frontend Folks"
         summary="You&lsquo;ve made some requests on Postman. You understand which
@@ -31,6 +31,6 @@ export default function Writing() {
         summary="An exploration of web component libraries that compares vanilla JavaScript, Nutmeg, Polymer, and Stencil versions of the same component."
         link="./writing/tale-of-four-components"
       />
-    </div>
+    </section>
   );
 }

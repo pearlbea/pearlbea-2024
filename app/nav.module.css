@@ -1,4 +1,4 @@
-.header {
+/* .header {
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
@@ -12,8 +12,8 @@
   right: 0;
   left: auto;
   width: 100%;
-}
-.links {
+} */
+/* .links {
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -24,9 +24,6 @@
 .link:active {
   color: #950451;
   padding: 0.8rem;
-}
-.active {
-  text-decoration: underline;
 }
 
 @media screen and (width < 700px) {
@@ -40,4 +37,7 @@
   .links {
     padding-left: 0.4rem;
   }
+} */
+.active {
+  text-decoration: underline;
 }
