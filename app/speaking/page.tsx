@@ -2,7 +2,7 @@ import Talk from "./talk";
 
 export default function Speaking() {
   return (
-    <section className="w-3/5 m-4">
+    <section>
       <Talk
         title="Leverage the Power of Native with Progressive Web Apps"
         event="Girl Geek X, Virtual Girl Geek Dinner"

@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+export default function Layout({ children }) {
+  return <section className="mx-8">{children}</section>;
+}
+
 <Image
   src="/precache-for-performance.jpg"
   alt=""

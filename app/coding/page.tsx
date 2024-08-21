@@ -1,12 +1,9 @@
-'use client';
+"use client";
 
-import NavMenu from "../nav";
-
-export default function Coding(){
-    return (
-        <>
-        <NavMenu />
-        <h1>Coding</h1>
-        </>
-    )
+export default function Coding() {
+  return (
+    <>
+      <h1>Coding</h1>
+    </>
+  );
 }
