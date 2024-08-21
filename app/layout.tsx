@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Pearl Latteier",
-  description: "Pearl's professional website",
+  description: "Pearl's portfolio website",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(roboto.className, "bg-slate-50")}>
         <main className="container mx-auto max-w-6xl">
-          <section className="flex flex-col md:w-2/5 m-8 lg:mx-16">
+          <header className="m-8">
             <Image
               src="/icon.png"
               alt="PB icon"
@@ -30,7 +30,6 @@ export default function RootLayout({
             <h1 className={clsx(roboto_slab.className, "text-4xl mt-8")}>
               Pearl Latteier
             </h1>
-
             <ul className="flex align-baseline">
               <li className="m-1">
                 <Link
@@ -68,8 +67,7 @@ export default function RootLayout({
                 </Link>
               </li>
             </ul>
-
-          </section>
+          </header>
           {children}
         </main>
       </body>

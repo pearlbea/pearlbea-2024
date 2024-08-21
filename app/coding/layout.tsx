@@ -1,11 +1,11 @@
 import PageLayout from "../page-layout";
 
-export default function WritingLayout({
+export default function CodingLayout({
   pageName,
   children,
 }: Readonly<{
   pageName: string;
   children: React.ReactNode;
 }>) {
-  return <PageLayout pageName="writing" children={children} />;
+  return <PageLayout pageName="coding" children={children} />;
 }

@@ -2,7 +2,7 @@ import Card from "../writing/card";
 
 export default function Writing() {
   return (
-    <section>
+    <section className="mx-8">
       <Card
         title=" A Quick Cors Primer for Frontend Folks"
         summary="You&lsquo;ve made some requests on Postman. You understand which

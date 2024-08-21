@@ -3,14 +3,9 @@ import styles from "./nav.module.css";
 
 export default function NavMenu({ page }: { page: string }) {
   return (
-    <nav className="">
-      <ul>
-        <li className="py-2">
-          <Link className={`my-4 ${page === "" ? styles.active : ""}`} href="/">
-            home
-          </Link>
-        </li>
-        <li className="py-2">
+    <nav className="px-8 underline-offset-4">
+      <ul className="flex pr-4 md:block">
+        <li className="py-2 mr-4">
           <Link
             className={`my-4 ${page === "writing" ? styles.active : ""}`}
             href="/writing"
@@ -18,7 +13,7 @@ export default function NavMenu({ page }: { page: string }) {
             WRITING
           </Link>
         </li>
-        <li className="py-2">
+        <li className="py-2 mr-4">
           <Link
             className={`${styles.link} ${
               page === "speaking" ? styles.active : ""
@@ -28,10 +23,10 @@ export default function NavMenu({ page }: { page: string }) {
             SPEAKING
           </Link>
         </li>
-        <li className="py-2">
+        <li className="py-2 mr-4">
           <Link
             className={`${styles.link} ${
-              page === "/coding" ? styles.active : ""
+              page === "coding" ? styles.active : ""
             }`}
             href="/coding"
           >

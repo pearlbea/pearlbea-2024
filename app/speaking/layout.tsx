@@ -1,16 +1,11 @@
-import { clsx } from "clsx";
-import { roboto } from "../fonts";
-import NavMenu from "../nav";
+import PageLayout from "../page-layout";
 
-export default function ArticleLayout({
+export default function SpeakingLayout({
+  pageName,
   children,
 }: Readonly<{
+  pageName: string;
   children: React.ReactNode;
 }>) {
-  return (
-    <div className={clsx(roboto.className, "flex p-8")}>
-      <NavMenu page="speaking" />
-      {children}
-    </div>
-  );
+  return <PageLayout pageName="speaking" children={children} />;
 }
