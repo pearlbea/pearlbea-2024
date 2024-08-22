@@ -7,5 +7,5 @@ export default function CodingLayout({
   pageName: string;
   children: React.ReactNode;
 }>) {
-  return <PageLayout pageName="coding" children={children} />;
+  return <PageLayout pageName="coding">{children}</PageLayout>;
 }
