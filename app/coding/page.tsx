@@ -1,9 +1,3 @@
-"use client";
-
 export default function Coding() {
-  return (
-    <>
-      <h1>Coding</h1>
-    </>
-  );
+  return <h1>Coding</h1>;
 }
