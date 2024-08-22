@@ -5,7 +5,7 @@ import { roboto } from "./fonts";
 
 export default function Home() {
   return (
-    <div className={clsx(roboto.className, "flex")}>
+    <div className={clsx(roboto.className, "flex flex-col md:flex-row")}>
       <NavMenu page="writing" />
       <Writing />
     </div>
