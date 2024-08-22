@@ -7,5 +7,5 @@ export default function SpeakingLayout({
   pageName: string;
   children: React.ReactNode;
 }>) {
-  return <PageLayout pageName="speaking" children={children} />;
+  return <PageLayout pageName="speaking">{children}</PageLayout>;
 }

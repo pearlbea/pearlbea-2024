@@ -7,5 +7,5 @@ export default function WritingLayout({
   pageName: string;
   children: React.ReactNode;
 }>) {
-  return <PageLayout pageName="writing" children={children} />;
+  return <PageLayout pageName="writing">{children}</PageLayout>;
 }
