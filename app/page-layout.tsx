@@ -12,7 +12,7 @@ export default function PageLayout({
   return (
     <div className={clsx(roboto.className, "flex flex-col md:flex-row")}>
       <NavMenu page={pageName} />
-      {children}
+      <div className="mx-8">{children}</div>
     </div>
   );
 }

@@ -14,9 +14,9 @@ export default function Talk({
   link: string;
 }) {
   return (
-    <section className="border">
+    <section>
       <h2
-        className={clsx(roboto_slab.className, "font-bold text-2xl py-2 mt-4")}
+        className={clsx(roboto_slab.className, "font-bold text-2xl py-2 mb-4")}
       >
         {title}
       </h2>
