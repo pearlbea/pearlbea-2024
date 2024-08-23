@@ -68,7 +68,7 @@ export default function RootLayout({
               </li>
             </ul>
           </header>
-          {children}
+          <div className="mx-8">{children}</div>
         </main>
       </body>
     </html>
