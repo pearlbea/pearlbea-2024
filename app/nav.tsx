@@ -3,7 +3,7 @@ import styles from "./nav.module.css";
 
 export default function NavMenu({ page }: { page: string }) {
   return (
-    <nav className="px-8 underline-offset-4">
+    <nav className=" mb-4 underline-offset-4 mr-4">
       <ul className="flex pr-4 md:block">
         <li className="py-2 mr-4">
           <Link

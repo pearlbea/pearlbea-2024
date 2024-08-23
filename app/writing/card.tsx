@@ -14,10 +14,7 @@ export default function ArticleCard({
   return (
     <div className="mb-4">
       <h2
-        className={clsx(
-          roboto_slab.className,
-          "font-bold text-xl md:text-2xl py-2"
-        )}
+        className={clsx(roboto_slab.className, "font-bold text-xl md:text-2xl")}
       >
         {title}
       </h2>
@@ -25,7 +22,7 @@ export default function ArticleCard({
       <Link
         className={clsx(
           roboto_slab.className,
-          "text-lg text-pink-900 hover:text-pink-700 active:text-pink-700 focus:text-pink-700 underline underline-offset-7"
+          "text-pink-900 hover:text-pink-700 active:text-pink-700 focus:text-pink-700 underline underline-offset-2"
         )}
         href={link}
       >
