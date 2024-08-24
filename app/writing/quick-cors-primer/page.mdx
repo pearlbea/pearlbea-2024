@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../writing.module.css";
+import { shimmer, toBase64 } from "../image-preload";
 
 export default function Layout({ children }) {
   return <section>{children}</section>;
@@ -10,6 +10,7 @@ export default function Layout({ children }) {
   alt="A skull and crossbones flag on a computer screen"
   width={768}
   height={530}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 530))}`}
   priority
 />
 

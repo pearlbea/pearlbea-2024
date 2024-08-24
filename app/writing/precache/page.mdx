@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { shimmer, toBase64 } from "../image-preload";
 
 export default function Layout({ children }) {
   return <section>{children}</section>;
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
   alt=""
   width={768}
   height={513}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 513))}`}
   priority
 />
 
@@ -47,7 +49,9 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('cache-v1').then(cache => {
       return cache.addAll([
-        '/css/main.css', '/js/main.js', '/img/logo.png'
+        '/css/main.css',
+        '/js/main.js',
+        '/img/logo.png'
       ]);
     })
   );

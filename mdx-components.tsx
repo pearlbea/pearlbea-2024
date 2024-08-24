@@ -37,6 +37,6 @@ export function useMDXComponents(): MDXComponents {
     ),
     hr: () => <hr className={styles.line} />,
     p: ({ children }) => <p className="text-lg mb-4">{children}</p>,
-    pre: ({ children }) => <pre className="text-lg px-8">{children}</pre>,
+    pre: ({ children }) => <pre className="text-sm px-4">{children}</pre>,
   };
 }

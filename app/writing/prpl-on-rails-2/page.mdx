@@ -1,10 +1,18 @@
 import Image from "next/image";
+import { shimmer, toBase64 } from "../image-preload";
 
 export default function Layout({ children }) {
   return <section>{children}</section>;
 }
 
-<Image src="/prpl-on-rails-3.jpg" alt="" width={768} height={432} priority />
+<Image
+  src="/prpl-on-rails-3.jpg"
+  alt=""
+  width={768}
+  height={432}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 432))}`}
+  priority
+/>
 
 Photo by [Daniel McCullough on Unsplash](https://unsplash.com)
 
@@ -24,6 +32,6 @@ Photo by [Daniel McCullough on Unsplash](https://unsplash.com)
 
 Website Performance Optimization, Udacity Course
 
-What Forces Layout, Paul Irish
+[What Forces Layout](https://gist.github.com/paulirish/5d52fb081b3570c81e3a), Paul Irish
 
-_Originally published in the [Bendyworks Blog](https://bendyworks.com/blog)._
+_Republished with permission from [Bendyworks](https://bendyworks.com/blog)._

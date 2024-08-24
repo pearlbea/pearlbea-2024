@@ -1,10 +1,18 @@
 import Image from "next/image";
+import { shimmer, toBase64 } from "../image-preload";
 
 export default function Layout({ children }) {
   return <section>{children}</section>;
 }
 
-<Image src="/prpl-on-rails-3.jpg" alt="" width={768} height={432} priority />
+<Image
+  src="/prpl-on-rails-3.jpg"
+  alt=""
+  width={768}
+  height={432}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 432))}`}
+  priority
+/>
 
 Photo by [Mike Wilson on Unsplash](https://unsplash.com)
 

@@ -1,11 +1,18 @@
 import Image from "next/image";
-import styles from "../writing.module.css";
+import { shimmer, toBase64 } from "../image-preload";
 
 export default function Layout({ children }) {
   return <section>{children}</section>;
 }
 
-<Image src="/lost-in-space.jpg" alt="" width={768} height={528} priority />
+<Image
+  src="/lost-in-space.jpg"
+  alt=""
+  width={768}
+  height={528}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 528))}`}
+  priority
+/>
 
 # Lost in SPA(ce): Helping screen readers navigate React applications
 
@@ -36,6 +43,7 @@ In HTML, it would look something like this:
   alt="Html code depicting a skip link anchor tag"
   width={768}
   height={559}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 559))}`}
   className="mb-4"
 />
 
@@ -46,6 +54,7 @@ We repurposed the skip-link pattern as a way to let users know when the content 
   alt="Code snippet of a React component"
   width={768}
   height={461}
+  placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(768, 461))}`}
   className="mb-4"
 />
 
