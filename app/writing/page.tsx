@@ -36,6 +36,11 @@ export default function Writing() {
         summary="Optimize rendering to speed up your site's time-to-interactive."
         link="./writing/prpl-on-rails-2"
       />
+      <Card
+        title="PRPL on Rails I"
+        summary="Split your Rails JavaScript with Webpack to make your site load faster."
+        link="./writing/prpl-on-rails-1"
+      />
     </section>
   );
 }
