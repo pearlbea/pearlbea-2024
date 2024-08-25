@@ -41,6 +41,11 @@ export default function Writing() {
         summary="Split your Rails JavaScript with Webpack to make your site load faster."
         link="./writing/prpl-on-rails-1"
       />
+      <Card
+        title="Introducing Intersection Observer"
+        summary="The IntersectionObserver API is a relatively new web API that allows you to observe when a DOM element enters or leaves a viewport."
+        link="./writing/intersection-observer"
+      />
     </section>
   );
 }
