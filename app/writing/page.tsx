@@ -31,6 +31,11 @@ export default function Writing() {
         summary="Improve your site's performance with service worker caching."
         link="./writing/prpl-on-rails-3"
       />
+      <Card
+        title="PRPL on Rails II"
+        summary="Optimize rendering to speed up your site's time-to-interactive."
+        link="./writing/prpl-on-rails-2"
+      />
     </section>
   );
 }
