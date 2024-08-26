@@ -14,7 +14,9 @@ export default function Layout({ children }) {
   priority
 />
 
-Have you written JavaScript to enable infinite scrolling or to lazy-load images that appear below the fold?
+<br />
+Have you written JavaScript to enable infinite scrolling or to lazy-load images that
+appear below the fold?
 
 If you're like me, you did this by listening for scroll events and requesting an element's `scrollTop` property or calling `getBoundingClientRect()` on an element. You forced the browser to stop everything and repeatedly recalculate the layout. You fought jank. You suffered. Your users suffered. It was a dark time.
 
@@ -30,10 +32,11 @@ When you create an `IntersectionObserver`, you pass it a callback that is trigge
 let observer = new IntersectionObserver(callback, options);
 let target = document.querySelector("#target");
 observer.observe(target);
-
 ```
 
-An optional `options` object allows you to fine-tune how the callback gets triggered. You can customize three available options: `root`, `rootMargin`, and `threshold`.
+<br />
+An optional `options` object allows you to fine-tune how the callback gets triggered.
+You can customize three available options: `root`, `rootMargin`, and `threshold`.
 
 ```
 let options = {
@@ -41,8 +44,9 @@ let options = {
   rootMargin: "10px 20px", // takes a string indicating margins
   threshold:  0.75 // takes a number or an array of numbers between 0 and 1
 };
-
 ```
+
+<br />
 
 `root`: By default, the callback runs whenever the target element's visibility changes with respect to the browser's viewport. However, if the viewport you care about is within the DOM--if it's, say, a container div that holds a slideshow--you can specify that element here.
 
